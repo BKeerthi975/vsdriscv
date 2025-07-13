@@ -1,0 +1,81 @@
+# RISC-V Instruction Decoding  
+
+This document presents the decoding of 15 unique RISC-V instructions from the riscv-objdump output of the application code. Each instruction is analyzed with its type, opcode, and corresponding 32-bit machine code representation. The instructions cover various formats, including R-Type, I-Type, S-Type, B-Type, U-Type, and J-Type, showcasing the fundamental operations in RISC-V architecture.  
+
+
+## Identified 15 Unique RISC-V Instructions and Their 32-bit Encodings
+
+### Instruction 1: add x5, x6, x7  
+- Format: R-Type  
+- Opcode: 0110011  
+- 32-bit Encoding: 0000000 00111 00110 000 00101 0110011  
+
+### Instruction 2: sub x8, x9, x10  
+- Format: R-Type  
+- Opcode: 0110011  
+- 32-bit Encoding: 0100000 01010 01001 000 01000 0110011  
+
+### Instruction 3: and x11, x12, x13  
+- Format: R-Type  
+- Opcode: 0110011  
+- 32-bit Encoding: 0000000 01101 01100 111 01011 0110011  
+
+### Instruction 4: or x14, x15, x16  
+- Format: R-Type  
+- Opcode: 0110011  
+- 32-bit Encoding: 0000000 10000 01111 110 01110 0110011  
+
+### Instruction 5: xor x17, x18, x19  
+- Format: R-Type  
+- Opcode: 0110011  
+- 32-bit Encoding: 0000000 10011 10010 100 10001 0110011  
+
+### Instruction 6: sll x20, x21, x22  
+- Format: R-Type  
+- Opcode: 0110011  
+- 32-bit Encoding: 0000000 10110 10101 001 10100 0110011  
+
+### Instruction 7: srl x23, x24, x25  
+- Format: R-Type  
+- Opcode: 0110011  
+- 32-bit Encoding: 0000000 11001 11000 101 10111 0110011  
+
+### Instruction 8: lw x6, 12(x7)  
+- Format: I-Type  
+- Opcode: 0000011  
+- 32-bit Encoding: 00001100 00111 010 00110 0000011  
+
+### Instruction 9: sw x6, 12(x7)  
+- Format: S-Type  
+- Opcode: 0100011  
+- 32-bit Encoding: 0000110 00110 00111 010 01100 0100011  
+
+### Instruction 10: beq x5, x6, label  
+- Format: B-Type  
+- Opcode: 1100011  
+- 32-bit Encoding: 000000 00110 00101 000 00000 1100011  
+
+### Instruction 11: bne x7, x8, label  
+- Format: B-Type  
+- Opcode: 1100011  
+- 32-bit Encoding: 000000 01000 00111 001 00000 1100011  
+
+### Instruction 12: jal x1, label  
+- Format: J-Type  
+- Opcode: 1101111  
+- 32-bit Encoding: 000000000000 00000 000 00001 1101111  
+
+### Instruction 13: jalr x2, x3, 16  
+- Format: I-Type  
+- Opcode: 1100111  
+- 32-bit Encoding: 00010000 00011 000 00010 1100111  
+
+### Instruction 14: lui x4, 0x10000  
+- Format: U-Type  
+- Opcode: 0110111  
+- 32-bit Encoding: 00010000000000000000 00100 0110111  
+
+### Instruction 15: auipc x5, 0x20000  
+- Format: U-Type  
+- Opcode: 0010111  
+- 32-bit Encoding: 00100000000000000000 00101 0010111
